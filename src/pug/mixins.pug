@@ -1,0 +1,94 @@
+mixin icon(id, className)
+	svg(xmlns:xlink="http://www.w3.org/1999/xlink" class=className)
+		use(xlink:href="#tmpl-hh__icon-" + id href="#tmpl-hh__icon-" + id)
+
+mixin video(video, thumbnail, source="youtube")
+	.video(data-video-id=video data-video-source=source)
+		img.video__preview(src=thumbnail)
+		.video__play-btn
+			+icon('play-btn')
+
+mixin nav-btn
+	.nav-btn
+		.nav-btn__line
+		.nav-btn__line
+		.nav-btn__line
+
+mixin modal(id, withCloseBtn=true)
+	.modal(id=id)
+		.modal__window
+			if withCloseBtn
+				button.modal__close-btn(type="button")
+			block
+
+mixin year-block(year, items)
+	.year-block
+		.year-block__year=year
+		ul.year-block__list
+			each item in items
+				li!=item
+
+mixin icon-tile(icon, title, text, isRow)
+	.icon-tile(class=(isRow ? "icon-tile--row" : ""))
+		.icon-tile__icon-block
+			+icon(icon, "icon-tile__icon")
+		.icon-tile__content
+			.icon-tile__title!=title
+			.icon-tile__text!=text
+
+mixin award-block(imgSrc, title, year)
+	.award-block
+		img.award-block__img(src=imgSrc)
+		.award-block__title!=title
+		.award-block__year=year
+
+mixin social-tile(icon, href)
+	a.social-tile(href=href target="_blank")
+		+icon(icon, "social-tile__icon")
+
+mixin count-card(icon, value, title)
+	.count-card
+		.count-card__icon-block
+			+icon(icon, "count-card__icon")
+		.count-card__value!=value
+		.count-card__title!=title
+
+mixin icon-card(icon, title)
+	.icon-card
+		.icon-card__icon-block
+			+icon(icon, "icon-card__icon")
+		.icon-card__title!=title
+		.icon-card__text
+			block
+
+mixin information-tile(bgSrc, title, href)
+	.information-tile(style="background-image: url(" + bgSrc + ")")
+		.information-tile__wrapper
+			.information-tile__title!=title
+			.information-tile__hidden-content
+				.information-tile__content
+					.information-tile__text
+						block
+					a.btn.btn--uppercase.btn--outline.information-tile__btn(href=href target="_blank") Перейти на сайт
+
+mixin icon-line(icon, title)
+	.icon-line
+		+icon(icon, "icon-line__icon")
+		.icon-line__title!=title
+
+mixin icon-line-2(icon, title)
+	.icon-line-2
+		+icon(icon, "icon-line-2__icon")
+		.icon-line-2__title!=title
+
+mixin note(imgSrc, title)
+	.note
+		img.note__img(src=imgSrc)
+		.titled-text
+			.titled-text__title!=title
+			.titled-text__text
+				block
+
+mixin slider-gallery-slide(imgSrc)
+	.swiper-slide.slider-gallery-slide
+		img.slider-gallery-slide__img(src=imgSrc)

@@ -1,0 +1,175 @@
+extends ./pug/layout
+
+block content
+	<!-- START HEADER --> 
+	header.header 
+		.container 
+			.header__inner 
+				a.header__logo(href="#")
+					img.logo(src="../images/logo.svg", alt="")
+				.header__menu  
+					.header__menu-list 	
+						.header__menu-item 
+							a.header__menu-link(href="#") Наши продукты 
+						.header__menu-item  
+							a.header__menu-link(href="#") Ценности Alif
+						.header__menu-item  
+							a.header__menu-link(href="#") Почему мы?
+				a.header__link(href="https://aliftech.uz/ru" target="_blank") aliftech.uz
+				+nav-btn
+	<!-- END HEADER -->
+	<!-- START FIRST SCREEN -->
+	section.first-screen 
+		.container 
+			.first-screen__inner 
+				.first-screen__content 
+					.heading Alif Uzbekistan
+					.first-screen__text 
+						p.first-screen__text-first  Алиф — финтех компания, миссия которой заключается в предоставлении финансовых услуг, основанных на благих ценностях и информационных технологиях.
+						p.first-screen__text-second Нашей целью является построение системы, которая повысит уровень жизни людей вокруг нашей экосистемы, расширяя их возможности в области финансов, технологий и образования.
+					a.first-screen__btn-link(href="#") Перейти к вакансиям 
+				img.first-screen__img(src="../images/first-screen.svg", alt="")
+	<!-- END FIRST SCREEN -->
+
+	<!-- START PRODUCTS -->
+	section.products 
+		.container 
+			.products__inner 
+				.products__content 
+					.heading Наши продукты
+					.products__content-text С командой из 100+ разработчиков, мы создали собственную автоматизированную банковскую систему (CBS), CRM, процессинговый центр, мобильный кошелек alif mobi, скоринговую систему, торговую площадку www.alifshop.uz и ряд других продуктов.
+				.products__cards 
+					.products__card
+						img.products__card-logo(src="../images/products/shop-logo.svg", alt="")
+						.products__card-text Онлайн маркетплейс
+					.products__card
+						img.products__card-logo(src="../images/products/delivery-logo.svg", alt="")
+						.products__card-text Сервис доставки
+					.products__card
+						img.products__card-logo(src="../images/products/credits-logo.svg", alt="")
+						.products__card-text Мониторинг рассрочек
+					.products__card
+						img.products__card-logo(src="../images/products/merchant-logo.svg", alt="")
+						.products__card-text Обработка заявок
+					.products__card
+						img.products__card-logo(src="../images/products/nasiya-logo.svg", alt="")
+						.products__card-text Личный кабинет
+					.products__card
+						img.products__card-logo(src="../images/products/mobi-logo.svg", alt="")
+						.products__card-text Платёжная система
+					.products__card
+						img.products__card-logo(src="../images/products/compliance-logo.svg", alt="")
+						.products__card-text Обработка заявок
+					.products__card
+						.products__card-text + более 10 проектов разного масштаба
+	<!-- END PRODUCTS -->
+
+	<!-- START VALUES -->
+	section.values
+		.container 
+			.heading Ценности Alif
+			.values__cards 
+				.values-card 
+					.values-card__img-wrap
+						img.values-card__img(src="../images/values/values-1.png", alt="")
+					.values-card__text-wrap 	
+						.values-card__heading Я необычный
+						.values-card__text Мы работаем на качество, <br> а не количество.
+				.values-card 
+					.values-card__img-wrap
+						img.values-card__img(src="../images/values/values-2.png", alt="")
+					.values-card__text-wrap 	
+						.values-card__heading Прогресс не бывает без ошибок
+						.values-card__text Мы принимаем свои ошибки и стараемся больше их не повторять.
+				.values-card 
+					.values-card__img-wrap
+						img.values-card__img(src="../images/values/values-3.png", alt="")
+					.values-card__text-wrap 	
+						.values-card__heading Я как Алиф!
+						.values-card__text Быть честным, искренним <br> и прямым, как буква <br> «Алиф»
+				.values-card 
+					.values-card__img-wrap
+						img.values-card__img(src="../images/values/values-4.png", alt="")
+					.values-card__text-wrap 	
+						.values-card__heading Алиф - мой
+						.values-card__text Выполнять работу <br> от чистого сердца.
+				.values-card 
+					.values-card__img-wrap
+						img.values-card__img(src="../images/values/values-5.png", alt="")
+					.values-card__text-wrap 	
+						.values-card__heading Я владею над своими желаниями
+						.values-card__text Дисциплина превыше всего.
+				.values-card 
+					.values-card__img-wrap
+						img.values-card__img(src="../images/values/values-6.png", alt="")
+					.values-card__text-wrap 
+						.values-card__heading Сегодня я лучше, чем вчера
+						.values-card__text Делимся и получаем фидбэки, исправляем <br> их и становимся лучше.
+				.values-card 
+					.values-card__img-wrap
+						img.values-card__img(src="../images/values/values-7.png", alt="")
+					.values-card__text-wrap 
+						.values-card__heading Я не безразличен
+						.values-card__text Не говорим «Это не моя проблема/не моя работа». <br> Всегда помогаем друг другу.
+	<!-- END VALUES -->
+
+	<!-- START ABOUT -->
+	section.about 
+		.container 
+			.about__cards 
+				.about__card-one 
+					img.about__card-img--one(src="../images/about/about-one.svg", alt="")
+					.about__card-text Единственным учредителем является холдинговая компания Alif Capital Holdings LTD, находящаяся в Лондоне. В неё входят ряд компаний в Таджикистане — ОАО «Алиф Банк», www.alif.tj  и Узбекистане — ООО Alif Moliya, www.alifshop.uz, www.aliftech.uz.
+				.about__card-two 
+					.about__card-text ИП ООО Alif Tech является резидентом IT-Park-а в Узбекистане и получило лицензию платёжной организации от Центрального Банка РУз и лицензию передачи данных от МРИТИК.
+				.about__card-three  
+					img.about__card-img--three(src="../images/about/about-three.svg", alt="")
+					.about__card-text Основной деятельностью компании Alif Tech является разработка ряда финтех-услуг, направленных на развитие продуктов рассрочки, электронной коммерции и платежей в Республике Узбекистан.
+	<!-- END ABOUT -->
+
+	<!-- START WHY-WE -->
+	section.why-we 
+		.container
+			.heading Почему мы?
+			.why-we__items
+				.why-we__item
+					img.why-we__item-img(src="../images/why-we/ww-icon-1.svg", alt="")
+					.why-we__item-title Культура
+					.why-we__item-text где можно расти и чувствовать себя комфортно
+				.why-we__item
+					img.why-we__item-img(src="../images/why-we/ww-icon-2.svg", alt="")
+					.why-we__item-title Команда
+					.why-we__item-text ориентированная на создание крутого продукта
+				.why-we__item
+					img.why-we__item-img(src="../images/why-we/ww-icon-3.svg", alt="")
+					.why-we__item-title Оплачиваем
+					.why-we__item-text участие в конференциях и курсах для прокачки скилов
+				.why-we__item
+					img.why-we__item-img(src="../images/why-we/ww-icon-4.svg", alt="")
+					.why-we__item-title Комфортный офис
+					.why-we__item-text со всеми условиями: игры, тимбилдинги и другие
+	<!-- END WHY-WE -->
+
+	<!-- START SWIPER -->
+	section.gallery.short-pb 
+		.swiper-container.gallery-slider(data-arrow-prev=".tmpl-hh__gallery-slider-arrow-prev" data-arrow-next=".tmpl-hh__gallery-slider-arrow-next")
+			.swiper-wrapper
+				.swiper-slide 
+					+video("B7jY7rgJ-Ws", "/images/swiper-photo/video-img.jpg") 
+				+slider-gallery-slide("/images/swiper-photo/photo-1.jpg")
+				+slider-gallery-slide("/images/swiper-photo/photo-1.jpg")
+				+slider-gallery-slide("/images/swiper-photo/photo-1.jpg")
+				+slider-gallery-slide("/images/swiper-photo/photo-1.jpg")
+		.container 
+			.gallery-slider__pagination
+				span.swiper-pagination-bullet
+				span.swiper-pagination-bullet
+				span.swiper-pagination-bullet
+				span.swiper-pagination-bullet
+				span.swiper-pagination-bullet
+			.slider-arrows.gallery-slider-arrows
+				.slider-arrow.slider-arrow--prev.gallery-slider-arrow-prev
+					+icon("arrow-left", "slider-arrow__icon")
+				.slider-arrow.slider-arrow--next.gallery-slider-arrow-next
+					+icon("arrow-right", "slider-arrow__icon")
+	<!-- END SWIPER -->
