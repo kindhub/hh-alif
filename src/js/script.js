@@ -1,6 +1,5 @@
 import VSwiper from "./modules/VSwiper";
 import Video from "./modules/Video";
-// import GallerySlider from './custom_modules/GallerySlider';
 import Anchor from './modules/Anchor';
 import Content from "./modules/Content";
 import Nav from "./modules/Nav";
@@ -52,7 +51,6 @@ import VacancyBtn from "./modules/VacancyBtn";
 
 const swiper = new VSwiper();
 new Video();
-// new GallerySlider(swiper);
 new Anchor();
 new Content();
 new Nav();

@@ -1,5 +1,6 @@
 @import "./../assets/vars";
 @import "./../assets/keyframes";
+@import "./../modules/nav.scss";
 
 // BREAKPOINT LAPTOP
 @media (max-width: $ss_laptop) {
@@ -9,6 +10,49 @@
 	.wrapper{
 		font-size: 16px;
 	}
+
+	.values-card{
+		&__content{
+			padding: 14px;
+		}
+		&__img-wrapper{
+			padding: 14px;
+			text-align: center;
+		}
+		&:nth-child(1){
+			width: 340px;
+		}
+		&:nth-child(2){
+			width: 525px;
+		}
+		&:nth-child(3){
+			width: 340px;
+		}
+		&:nth-child(4){
+			width: 525px;
+		}
+		&:nth-child(5){
+			width: 340px;
+		}
+		&:nth-child(6){
+			width: 525px;
+		}
+		&:nth-child(7){
+			width: 100%;
+		}
+	}
+
+
+
+	.slider-arrows{
+		margin-left: 75px;
+	}
+	.gallery-slider{
+		&__pagination{
+			display: none;
+		}
+	}
+
 }
 
 // BREAKPOINT TABLET
@@ -19,12 +63,114 @@
 	.container{
 		padding: 0 15px;
 	}
+
+	.header{ 
+	padding: 45px 0;
+		&__inner{
+			padding: 0;
+		}
+	}
+
+	@include nav-module($color_primary, #fff);
+	.nav {
+		display: flex;
+		flex-direction: column;
+		z-index: 3;
+		&__item {
+			color: #fff !important;
+			& + & {
+				margin-left: 0;
+			}
+			&--site{
+				display: none;
+			}
+			&--mob{
+				display: block;
+			}
+		}
+	}
+
+	.first-screen{
+		&__content{
+			width: 50%;
+		}
+		&__img{
+			width: 44%;
+		}
+	}
+
+	.products{
+		&__card{
+			width: 48.5%;
+		}
+	
+		&__card:nth-child(3) {
+			margin-top: 20px;
+		}
+	
+		&__card:nth-child(4) {
+			margin-top: 20px;
+		}
+	}
+
+	.values-card{
+		width: 100% !important;
+	}
+
+	.about{
+		&__card-one{
+			font-size: 18px;
+		}
+		&__card-two{
+			width: 100%;
+			margin-bottom: 26px;
+			font-size: 18px;
+		}
+
+		&__card-three{
+			width: 100%;
+			font-size: 18px;
+		}
+	}
+
+	.why-we{
+		&__item{
+			width: 40%;
+			text-align: center;
+		}
+		&__item:nth-child(3) {
+			margin-top: 30px;
+		}
+	
+		&__item:nth-child(4) {
+			margin-top: 30px;
+		}
+	}
 }
+
 
 // BREAKPOINT SM TABLET
 @media (max-width: $ss_sm_tablet) {
 	.wrapper{
 		font-size: 14px;
+	}
+	.first-screen{
+		&__inner{
+			display: block;
+			text-align: center;
+		}
+		&__content {
+			width: 100%;
+			padding: 0;
+		}
+
+		&__text-first {
+			width: 100%;
+		}
+
+		&__img{
+			padding-top: 40px;
+		}
 	}
 }
 
@@ -34,4 +180,43 @@
 		width: calc(100% + 30px);
 		margin: 0 -15px;
 	}
+
+	.values-card{
+		&__img-wrapper{
+			min-width: 100px;
+			display: flex;
+    		justify-content: center;
+    		align-items: center;
+		}
+
+		&__img{
+			width: 60%;
+		}
+	}
+
+	.about {
+		&__cards {
+			display: block;
+			text-align: center;
+		}
+		&__card-one {
+			display: block;
+			text-align: center;
+		}
+
+		&__card-three {
+			display: block;
+			text-align: center;
+		}
+
+		&__card-img--one {
+			margin: 0 0 20px;
+		}
+	
+		&__card-img--three {
+			margin: 0 0 20px;
+		}
+
+	}
+
 }

@@ -8,8 +8,6 @@
 @import "../modules/swiper";
 
 
-@include video-module;
-
 // COMMON
 .wrapper {
 	background: #fff;
@@ -40,9 +38,10 @@
 	}
 }
 
+@include video-module;
 @include content-module;
 @include modal-module;
-@include nav-module-btn($color_primary);
+@include nav-module-btn($color_text);
 
 .container {
 	max-width: 1130px;
@@ -50,6 +49,7 @@
 	margin: 0 auto;
 	position: relative;
 	box-sizing: border-box;
+
 }
 .default-slider {
 	width: 100%;
@@ -125,20 +125,6 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 62px 0 45px;
-	}
-	&__menu-list {
-		display: flex;
-		justify-content: space-between;
-	}
-	&__menu-item + &__menu-item {
-		margin-left: 40px;
-	}
-
-	&_link {
-		transition: all 0.5s;
-	}
-	&__link:hover {
-		text-decoration: underline;
 	}
 }
 
@@ -223,73 +209,55 @@
 	}
 }
 
-.values {
-	padding: 100px 0;
-	&__cards {
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-	}
-	&-card {
-		background: #f8f8f8;
-		width: 33.5%;
-		display: flex;
-		border-radius: 12px;
-		align-items: center;
-		height: 131px;
-	}
+.values__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: -20px;
+}
 
-	&-card:nth-child(2) {
-		width: 65%;
-	}
-
-	&-card:nth-child(3) {
-		margin-top: 20px;
-	}
-
-	&-card:nth-child(4) {
-		width: 30%;
-		margin-top: 20px;
-	}
-
-	&-card:nth-child(5) {
-		margin-top: 20px;
-	}
-
-	&-card:nth-child(6) {
-		margin-top: 20px;
-		width: 46%;
-	}
-
-	&-card:nth-child(7) {
-		width: 52.5%;
-		margin-top: 20px;
-	}
-
-	&-card__text-wrap {
-		margin-left: 20px;
-	}
-
-	&-card__text {
-		color: #6b6b6b;
-	}
-
-	&-card__img {
-		width: 94px;
-		height: 99px;
-	}
-
-	&-card__img-wrap {
-		background: $color-primary;
-		padding: 16px 18px;
-		border-radius: 12px 0 0 12px;
-		height: 131px;
-		width: 131px;
-	}
-
-	&-card__heading {
-		font-weight: bold;
+.values-card{
+	background: #F8F8F8;
+	display: flex;
+	border-radius: 12px;
+	margin-bottom: 20px;
+	&__title{
+		font-weight: 720;
+		line-height: 22px;
 		margin-bottom: 10px;
+	}
+	&__img-wrapper{
+		padding: 18px;
+		background: $color_primary;
+		min-width: 131px;
+		border-radius: 12px 0px 0px 12px;
+	}
+	&__content{
+		padding: 20px;
+	}
+	&__text{
+		color: #6B6B6B;
+	}
+	&:nth-child(1){
+		width: 384px;
+	}
+	&:nth-child(2){
+		width: 726px;
+	}
+	&:nth-child(3){
+		width: 384px;
+	}
+	&:nth-child(4){
+		width: 321px;
+	}
+	&:nth-child(5){
+		width: 385px;
+	}
+	&:nth-child(6){
+		width: 535px;
+	}
+	&:nth-child(7){
+		width: 575px;
 	}
 }
 

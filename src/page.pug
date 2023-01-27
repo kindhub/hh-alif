@@ -7,16 +7,16 @@ block content
 			.header__inner 
 				a.header__logo(href="#")
 					img.logo(src="../images/logo.svg", alt="")
-				.header__menu  
-					.header__menu-list 	
-						.header__menu-item 
-							a.header__menu-link(href="#") Наши продукты 
-						.header__menu-item  
-							a.header__menu-link(href="#") Ценности Alif
-						.header__menu-item  
-							a.header__menu-link(href="#") Почему мы?
-				a.header__link(href="https://aliftech.uz/ru" target="_blank") aliftech.uz
-				+nav-btn
+				.header__nav.nav
+					a.nav__item.anchor(href="#products") Наши продукты
+					a.nav__item.anchor(href="#values") Ценности Alif
+					a.nav__item.anchor(href="#why-we") Почему мы?
+					a.nav__item.nav__item--mob.anchor(href="https://aliftech.uz/ru" target="blank_") aliftech.uz
+				a.nav__item.nav__item--site.anchor(href="https://aliftech.uz/ru" target="blank_") aliftech.uz
+				.nav-btn
+					.nav-btn__line
+					.nav-btn__line
+					.nav-btn__line
 	<!-- END HEADER -->
 	<!-- START FIRST SCREEN -->
 	section.first-screen 
@@ -32,11 +32,11 @@ block content
 	<!-- END FIRST SCREEN -->
 
 	<!-- START PRODUCTS -->
-	section.products 
+	section.products#products
 		.container 
 			.products__inner 
 				.products__content 
-					.heading Наши продукты
+					.heading Наши продукты 
 					.products__content-text С командой из 100+ разработчиков, мы создали собственную автоматизированную банковскую систему (CBS), CRM, процессинговый центр, мобильный кошелек alif mobi, скоринговую систему, торговую площадку www.alifshop.uz и ряд других продуктов.
 				.products__cards 
 					.products__card
@@ -64,54 +64,19 @@ block content
 						.products__card-text + более 10 проектов разного масштаба
 	<!-- END PRODUCTS -->
 
-	<!-- START VALUES -->
-	section.values
+	<!-- START SECTION VALUES -->
+	.section.values.section--medium#values 
 		.container 
 			.heading Ценности Alif
-			.values__cards 
-				.values-card 
-					.values-card__img-wrap
-						img.values-card__img(src="../images/values/values-1.png", alt="")
-					.values-card__text-wrap 	
-						.values-card__heading Я необычный
-						.values-card__text Мы работаем на качество, <br> а не количество.
-				.values-card 
-					.values-card__img-wrap
-						img.values-card__img(src="../images/values/values-2.png", alt="")
-					.values-card__text-wrap 	
-						.values-card__heading Прогресс не бывает без ошибок
-						.values-card__text Мы принимаем свои ошибки и стараемся больше их не повторять.
-				.values-card 
-					.values-card__img-wrap
-						img.values-card__img(src="../images/values/values-3.png", alt="")
-					.values-card__text-wrap 	
-						.values-card__heading Я как Алиф!
-						.values-card__text Быть честным, искренним <br> и прямым, как буква <br> «Алиф»
-				.values-card 
-					.values-card__img-wrap
-						img.values-card__img(src="../images/values/values-4.png", alt="")
-					.values-card__text-wrap 	
-						.values-card__heading Алиф - мой
-						.values-card__text Выполнять работу <br> от чистого сердца.
-				.values-card 
-					.values-card__img-wrap
-						img.values-card__img(src="../images/values/values-5.png", alt="")
-					.values-card__text-wrap 	
-						.values-card__heading Я владею над своими желаниями
-						.values-card__text Дисциплина превыше всего.
-				.values-card 
-					.values-card__img-wrap
-						img.values-card__img(src="../images/values/values-6.png", alt="")
-					.values-card__text-wrap 
-						.values-card__heading Сегодня я лучше, чем вчера
-						.values-card__text Делимся и получаем фидбэки, исправляем <br> их и становимся лучше.
-				.values-card 
-					.values-card__img-wrap
-						img.values-card__img(src="../images/values/values-7.png", alt="")
-					.values-card__text-wrap 
-						.values-card__heading Я не безразличен
-						.values-card__text Не говорим «Это не моя проблема/не моя работа». <br> Всегда помогаем друг другу.
-	<!-- END VALUES -->
+			.values__inner 
+				+values-card("images/values/values-1.png", "Я необычный", "Мы работаем на качество, а не количество.")
+				+values-card("images/values/values-2.png", "Прогресс не бывает без ошибок", "Мы принимаем свои ошибки и стараемся больше их не повторять.")
+				+values-card("images/values/values-3.png", "Я как Алиф!", "Быть честным, искренним и прямым, как буква «Алиф»")
+				+values-card("images/values/values-4.png", "Алиф - мой", "Выполнять работу от чистого сердца.")
+				+values-card("images/values/values-5.png", "Я владею над своими желаниями", "Дисциплина превыше всего.")
+				+values-card("images/values/values-6.png", "Сегодня я лучше, чем вчера", "Делимся и получаем фидбэки, исправляем их и становимся лучше.")
+				+values-card("images/values/values-7.png", "Я не безразличен", "Не говорим «Это не моя проблема/не моя работа». Всегда помогаем друг другу.")
+	<!-- END SECTION VALUES -->
 
 	<!-- START ABOUT -->
 	section.about 
@@ -128,7 +93,7 @@ block content
 	<!-- END ABOUT -->
 
 	<!-- START WHY-WE -->
-	section.why-we 
+	section.why-we#why-we 
 		.container
 			.heading Почему мы?
 			.why-we__items
