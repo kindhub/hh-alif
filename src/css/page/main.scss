@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900");
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
 @import "../assets/vars";
 @import "../assets/keyframes";
 @import "../modules/video.scss"; 
@@ -40,7 +40,6 @@
 
 @include video-module;
 @include content-module;
-@include modal-module;
 @include nav-module-btn($color_text);
 
 .container {
@@ -155,6 +154,7 @@
 		background: $color-primary;
 		color: #fff !important;
 		transition: all 0.3s ease-in;
+		cursor: pointer;
 	}
 
 	&__btn-link:hover {

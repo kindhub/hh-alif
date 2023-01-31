@@ -42,8 +42,6 @@
 		}
 	}
 
-
-
 	.slider-arrows{
 		margin-left: 75px;
 	}
@@ -65,7 +63,7 @@
 	}
 
 	.header{ 
-	padding: 45px 0;
+		padding: 45px 0;
 		&__inner{
 			padding: 0;
 		}
@@ -172,6 +170,34 @@
 			padding-top: 40px;
 		}
 	}
+
+	.about{
+		padding-bottom: 50px;
+		&__card-one{
+			font-size: 14px;
+		}
+		&__card-two{
+			font-size: 14px;
+		}
+
+		&__card-three{
+			font-size: 14px;
+		}
+	}
+
+	.why-we{
+		padding-bottom: 50px;
+	}
+	.gallery .container{
+		justify-content: center;
+		padding-top: 15px;
+	}
+	.slider-arrows{
+		margin-left: 0px;
+	}
+	.slider-arrow{
+		padding: 10px 20px;
+	}
 }
 
 // BREAKPOINT PHONE
@@ -216,7 +242,8 @@
 		&__card-img--three {
 			margin: 0 0 20px;
 		}
-
 	}
-
+	.video__play-btn {
+		font-size: 3em;
+	}
 }

@@ -56,5 +56,4 @@ new Content();
 new Nav();
 new VacancyBtn();
 
-
 initGallerySlider();
